@@ -135,6 +135,7 @@ public class BotDriver {
 				if( state == 1 && valid == 1) {
 					if( Duration.between(press, Instant.now()).toMillis() > period) {
 						r.keyPress( KeyEvent.VK_RIGHT);
+						TimeUnit.MILLISECONDS.sleep(20);
 						r.keyRelease( KeyEvent.VK_RIGHT);
 						System.out.println("right");
 						press = Instant.now();
@@ -142,6 +143,7 @@ public class BotDriver {
 				} else if ( state == 0 && valid == 1){
 					if( Duration.between(press, Instant.now()).toMillis() > period) {
 						r.keyPress( KeyEvent.VK_LEFT);
+						TimeUnit.MILLISECONDS.sleep(20);
 						r.keyRelease( KeyEvent.VK_LEFT);
 						System.out.println("left");
 						press = Instant.now();
